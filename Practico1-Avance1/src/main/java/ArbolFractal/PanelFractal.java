@@ -31,7 +31,7 @@ public class PanelFractal extends JPanel {
         drawLand(gc);
 
         ArbolFractal treeDrawer = new ArbolFractal();
-
+/*
         // Arbol muy pequeno atras
         treeDrawer.setDefaults();
         treeDrawer.setWidthTrunk(0.8);
@@ -56,12 +56,16 @@ public class PanelFractal extends JPanel {
         treeDrawer.setAngle(Math.PI / 8.0);
         treeDrawer.draw(335, 554, 330, 408, 9, 9, gc);
 
+ */
+
         // arbol adelante, solamente las ramas
         treeDrawer.setDefaults();
         treeDrawer.setWidthTrunk(3.0);
         treeDrawer.setFactorLengthN(0.6);
         treeDrawer.setAngle(Math.PI / 6.0);
-        treeDrawer.draw(510, 531, 510, 432, 3, 3, gc);
+        treeDrawer.draw(510, 531, 510, 432, 2, 2, gc);
+
+
     }
 
     private void drawLand(Graphics gc) {

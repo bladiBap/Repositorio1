@@ -20,7 +20,7 @@ public class Ventana extends JFrame {
 
         panel = new Panel();
         this.add(panel);
-        panel.setBackground(Color.orange);
+        //panel.setBackground(Color.orange);
 
 
 
