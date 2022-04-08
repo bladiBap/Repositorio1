@@ -1,13 +1,14 @@
 package Prac2;
 
+import org.apache.log4j.Logger;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
-public class Panel extends JPanel implements MouseListener {
+public class Panel extends JPanel {
 
-    //Arbol arbol = new Arbol();
+    private int anchoCielo = 200;
+    private static final Logger logger = Logger.getRootLogger();
 
     public Panel() {
     }
@@ -20,48 +21,41 @@ public class Panel extends JPanel implements MouseListener {
         dibujarTierra(g);
         dibujarSol(g);
         g.setColor(Color.BLACK);
-        arbol.dibujarArbol(500,500,500,300,8,g);
+
+        logger.info("Arbol Central");
+        arbol.dibujarArbol(0, 15, 100, 500, 550, 500, 350, 9, g);
+
+        logger.info("Arbol Izquierdo");
+        arbol.dibujarArbol(0, 8, 55, 200, 200, 200, 150, 4, g);
+
+        logger.info("Arbol Derecho");
+        arbol.dibujarArbol(0, 10, 75, 850, 350, 850, 250, 5, g);
+
+        //arbol.dibujarArbol(10,75,500,500,500,300,5,g);
         //g2.drawLine(100,100,50,50);
         //g2.drawLine(50,50,300,50);
 
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
 
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-
-    }
-
-    public void dibujarTierra(Graphics g){
+    public void dibujarTierra(Graphics g) {
         g.setColor(new Color(0, 254, 0));
-        g.fillRect(0,200,1000,400);
+        g.fillRect(0, 200, 1000, 400);
     }
 
-    public void dibujarCielo(Graphics g){
+    public void dibujarCielo(Graphics g) {
         g.setColor(new Color(135, 206, 235));
-        g.fillRect(0,0,1000,200);
+        g.fillRect(0, 0, 1000, anchoCielo);
     }
-    public void dibujarSol(Graphics g){
+
+    public void dibujarSol(Graphics g) {
         g.setColor(new Color(250, 250, 0));
-        g.fillOval(800,120,50,50);
+        g.fillOval(800, 120, 50, 50);
     }
+
+    public int getAnchoCielo() {
+        return anchoCielo;
+    }
+
+
 }
