@@ -34,10 +34,8 @@ public class Ventana extends JFrame implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        int x = e.getX();
-        int y = e.getY();
 
-        verificacion(y, x);
+        verificacion(e.getY(), e.getX());
 
     }
 
@@ -67,7 +65,7 @@ public class Ventana extends JFrame implements MouseListener {
             JOptionPane.showMessageDialog(null, "No se puede crear un arbol en el cielo");
             return;
         }
-        logger.info("La Poscision en X: " + x + " y Posicion en Y: " + y + " es valida");
+        logger.info("La Posicision en X: " + x + " y Posicion en Y: " + y + " es valida");
     }
 
 

@@ -2,6 +2,7 @@ package Prac2;
 
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class Arbol {
@@ -27,8 +28,9 @@ public class Arbol {
 
     public void dibujarArbol(int inicioColor, int ancho, int desplazamiento, int posx, int posy, int posx2, int posy2, int complegidad, Graphics g) {
 
+
         int tamaño = (int) Math.sqrt(Math.pow((posx2 - posx), 2) + Math.pow((posy2 - posy), 2));
-        if (complegidad <= 1) {
+        if (complegidad <= 0) {
             return;
         }
 
@@ -50,6 +52,12 @@ public class Arbol {
         int finaly = posy2 - desplazamiento + 25; //25
         int nuevoDesplazamiento = desplazamiento - 10;
         int nuevaAnchura = ancho - 2;
+
+        if (nuevaAnchura <= 2 ) {
+            nuevaAnchura = 1;
+        }
+
+
 
 
         dibujarArbol(inicioColor, nuevaAnchura, nuevoDesplazamiento, posx2, posy2, finalx, finaly, complegidad - 1, g);

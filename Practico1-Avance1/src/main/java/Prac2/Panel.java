@@ -23,10 +23,10 @@ public class Panel extends JPanel {
         g.setColor(Color.BLACK);
 
         logger.info("Arbol Central");
-        arbol.dibujarArbol(0, 15, 100, 500, 550, 500, 350, 9, g);
+        arbol.dibujarArbol(0, 16, 100, 500, 550, 500, 350, 9, g);
 
         logger.info("Arbol Izquierdo");
-        arbol.dibujarArbol(0, 8, 55, 200, 200, 200, 150, 4, g);
+        arbol.dibujarArbol(0, 8, 65, 200, 200, 200, 150, 4, g);
 
         logger.info("Arbol Derecho");
         arbol.dibujarArbol(0, 10, 75, 850, 350, 850, 250, 5, g);
