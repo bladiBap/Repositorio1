@@ -43,7 +43,7 @@ public class Arbol {
             inicioColor = 5;
         }
 
-        logger.info("posicion x1: " + posx + " posicion y1: " + posy + " ---- " + " posicion x2: " + posx2 + " posicion y2: " + posy2 + "  -----  " + " Con un tamaño de: " + tamaño);
+        logger.info("posicion x1: " + posx + " posicion y1: " + posy + " ---- " + " posicion x2: " + posx2 + " posicion y2: " + posy2 + "  -----  " + " Con un tamaño de: " + tamaño+" Con una anchura de: "+ancho);
         g2.drawLine(posx, posy, posx2, posy2);
 
         //int finalx = (int)(posx2*desplaParaX);
