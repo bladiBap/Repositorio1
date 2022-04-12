@@ -1,11 +1,18 @@
 package Prac2;
 
 import org.apache.log4j.Logger;
-
-import javax.swing.*;
 import java.awt.*;
 
 public class Arbol {
+
+    private int posx1;
+    private int posy1;
+    private int posx2;
+    private int posy2;
+    private int ancho;
+    private int complegidad;
+    private int desplazamiento;
+    private int inicioColor;
 
     private static final Logger logger = Logger.getRootLogger();
     private Color[] colors = {
@@ -22,7 +29,16 @@ public class Arbol {
     //private double desplazamiento2y = 0.7 ;
     //private int desplazamiento = 75;
 
-    public Arbol() {
+
+    public Arbol(int posx1, int posy1, int posx2, int posy2, int ancho, int complegidad, int desplazamiento, int inicioColor) {
+        this.posx1 = posx1;
+        this.posy1 = posy1;
+        this.posx2 = posx2;
+        this.posy2 = posy2;
+        this.ancho = ancho;
+        this.complegidad = complegidad;
+        this.desplazamiento = desplazamiento;
+        this.inicioColor = inicioColor;
 
     }
 
@@ -43,13 +59,13 @@ public class Arbol {
             inicioColor = 5;
         }
 
-        logger.info("posicion x1: " + posx + " posicion y1: " + posy + " ---- " + " posicion x2: " + posx2 + " posicion y2: " + posy2 + "  -----  " + " Con un tamaño de: " + tamaño+" Con una anchura de: "+ancho);
+        logger.info("posicion x1: " + posx + " posicion y1: " + posy + " ---- " + " posicion x2: " + posx2 + " posicion y2: " + posy2 + "  -----  " + " Con un tamaño de: " + tamaño+" Con una anchura de: "+ancho+"--- Con un desplazamiento de: "+desplazamiento);
         g2.drawLine(posx, posy, posx2, posy2);
 
         //int finalx = (int)(posx2*desplaParaX);
         //int finaly = (int)(posy2*desplaParay);
-        int finalx = posx2 - desplazamiento + 35; //35
-        int finaly = posy2 - desplazamiento + 25; //25
+        int finalx = posx2 - desplazamiento+35 ; //35
+        int finaly = posy2 - desplazamiento+25 ; //25
         int nuevoDesplazamiento = desplazamiento - 10;
         int nuevaAnchura = ancho - 2;
 
@@ -62,7 +78,7 @@ public class Arbol {
 
         dibujarArbol(inicioColor, nuevaAnchura, nuevoDesplazamiento, posx2, posy2, finalx, finaly, complegidad - 1, g);
 
-        int finalx2 = posx2 + desplazamiento - 35; //35
+        int finalx2 = posx2 + desplazamiento-35 ; //35
         //int finalyz = posy2-desplazamiento;
         //int nuevoDesplazamiento2 = desplazamiento-15;
 
@@ -71,6 +87,70 @@ public class Arbol {
 
         dibujarArbol(inicioColor, nuevaAnchura, nuevoDesplazamiento, posx2, posy2, finalx2, finaly, complegidad - 1, g);
 
+    }
+
+    public int getPosx1() {
+        return posx1;
+    }
+
+    public void setPosx1(int posx1) {
+        this.posx1 = posx1;
+    }
+
+    public int getPosy1() {
+        return posy1;
+    }
+
+    public void setPosy1(int posy1) {
+        this.posy1 = posy1;
+    }
+
+    public int getPosx2() {
+        return posx2;
+    }
+
+    public void setPosx2(int posx2) {
+        this.posx2 = posx2;
+    }
+
+    public int getPosy2() {
+        return posy2;
+    }
+
+    public void setPosy2(int posy2) {
+        this.posy2 = posy2;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    public int getComplegidad() {
+        return complegidad;
+    }
+
+    public void setComplegidad(int complegidad) {
+        this.complegidad = complegidad;
+    }
+
+    public int getDesplazamiento() {
+        return desplazamiento;
+    }
+
+    public void setDesplazamiento(int desplazamiento) {
+        this.desplazamiento = desplazamiento;
+    }
+
+    public int getInicioColor() {
+        return inicioColor;
+    }
+
+    public void setInicioColor(int inicioColor) {
+        this.inicioColor = inicioColor;
     }
 
 
