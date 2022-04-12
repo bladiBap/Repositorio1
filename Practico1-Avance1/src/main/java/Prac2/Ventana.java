@@ -43,7 +43,7 @@ public class Ventana extends JFrame implements MouseListener {
             int desplazamiento = definirDesplazamiento(e.getY());
             int altura = alturaTronco(e.getY());
             logger.info("La Posicision en X: " + e.getX() + " y Posicion en Y: " + e.getY() + " es valida");
-            arbol = new Arbol(e.getX(), e.getY(), e.getX(), e.getY() - altura, 15, 6, desplazamiento, 0);
+            arbol = new Arbol(e.getX(), e.getY(), e.getX(), e.getY() - altura, 15, 8, desplazamiento, 0);
             panel.addLista(arbol);
         }
 
@@ -92,7 +92,7 @@ public class Ventana extends JFrame implements MouseListener {
                 if (posy >= 300 && posy < 400) {
                     return 80;  //70
                 } else {
-                    return 70;  //60
+                    return 50;  //60
                 }
             }
         }

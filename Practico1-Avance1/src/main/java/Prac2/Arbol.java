@@ -72,6 +72,9 @@ public class Arbol {
         if (nuevaAnchura <= 2 ) {
             nuevaAnchura = 1;
         }
+        if (nuevoDesplazamiento <= 30 ) {
+            nuevoDesplazamiento = 30;
+        }
 
 
 
