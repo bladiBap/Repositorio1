@@ -66,6 +66,8 @@ public class VentanaEmergente extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(pixelado)){
+            ConvertirPixel cov = new ConvertirPixel(modelo);
+            cov.transformar(posx1, posy1,posx2,posy2);
             System.out.println(1);
             this.dispose();
         }
