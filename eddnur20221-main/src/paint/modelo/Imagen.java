@@ -1,6 +1,6 @@
-package paint.modelo;
+package src.paint.modelo;
 
-import paint.vista.PaintPanel;
+import src.paint.vista.PaintPanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -20,6 +20,10 @@ public class Imagen {
         initImagen(w,h);
     }
 
+    public Imagen(BufferedImage bi) {
+        cambios = new PropertyChangeSupport(this);
+        initImagen(bi);
+    }
 
     private void initImagen(BufferedImage bi) {
         ancho = bi.getWidth();

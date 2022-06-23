@@ -1,8 +1,10 @@
-package paint.vista;
+package src.paint.vista;
 
-import paint.modelo.Imagen;
-import paint.modelo.Transformacion;
-import paint.modelo.TransformarTonosDeGris;
+import paint.modelo.BordesKernel;
+import paint.modelo.Suavizado;
+import src.paint.modelo.Imagen;
+import src.paint.modelo.Transformacion;
+import src.paint.modelo.TransformarTonosDeGris;
 
 import javax.swing.*;
 import java.awt.*;
@@ -37,7 +39,7 @@ public class PaintFrame extends JFrame {
 
         this.getContentPane().add(btnHacer, BorderLayout.SOUTH);
 
-        JButton btnGris = new JButton("Gris");
+        JButton btnGris = new JButton("Suavizar");
         btnGris.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,12 +53,11 @@ public class PaintFrame extends JFrame {
     }
 
     private void btnGris_clicked() {
-        Transformacion tonosDeGris = new TransformarTonosDeGris(modelo);
+        Transformacion tonosDeGris = new BordesKernel(modelo);
         tonosDeGris.transformar();
     }
 
     private void btnHacer_clicked() {
-        //modelo.leerDeArchivo("c:/temp/edd1.jpg");
-        modelo.leerDeArchivo("D:\\Criptos\\CriptoGodFather Collection\\01_04_07.png");
+        modelo.leerDeArchivo("c:/temp/edd1.jpg");
     }
 }

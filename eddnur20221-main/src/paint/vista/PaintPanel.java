@@ -1,7 +1,7 @@
-package paint.vista;
+package src.paint.vista;
 
 
-import paint.modelo.Imagen;
+import src.paint.modelo.Imagen;
 
 import javax.swing.*;
 import java.awt.*;

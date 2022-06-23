@@ -1,6 +1,6 @@
-package paint;
+package src.paint;
 
-import paint.vista.PaintFrame;
+import src.paint.vista.PaintFrame;
 
 public class PaintMain {
     public static void main(String[] args) {

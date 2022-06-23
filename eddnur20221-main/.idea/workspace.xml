@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5429666a-b8fc-4ade-bc39-7e748aa00044" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/ArbolArchivos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/Archivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/ArchivoCarpeta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/Carpeta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/Configuracion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/Consola.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/inter/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/inter/Panel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/otros/Arbol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../practico6/src/main/java/otros/Lista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practico1-Avance1/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Practico1-Avance1/log/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/ConvertirRotarHorizontal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/ConvertirRotarHorizontal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/PanelImagen.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/PanelImagen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/VentanaEmergente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practico1-Avance1/target/classes/Prac3/VentanaEmergente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tecnologia_en_Mecanica_Automotriz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eddnur20221-main.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../eddnur20221-main.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_api_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j_api_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j_core_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eddnur20221-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eddnur20221-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/Primero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/PaintMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/modelo/Imagen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/modelo/Transformacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/modelo/TransformarTonosDeGris.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/vista/PaintFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/vista/PaintFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/vista/PaintFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eddnur20221-main/paint/vista/PaintPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/PaintMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/PaintMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/modelo/Imagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/modelo/Imagen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/modelo/Transformacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/modelo/Transformacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/modelo/TransformarTonosDeGris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/modelo/TransformarTonosDeGris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/vista/PaintFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/vista/PaintFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paint/vista/PaintPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paint/vista/PaintPanel.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AxNmbXUmnSkApLvCnV0YMPvF30" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Universidad NUR/SEMESTRE 3/PROGRAMACION 3/eddnur20221-main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5429666a-b8fc-4ade-bc39-7e748aa00044" name="Changes" comment="" />
+      <created>1655947435987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655947435987</updated>
+    </task>
+    <servers />
+  </component>
+</project>

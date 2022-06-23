@@ -1,4 +1,4 @@
-package paint.modelo;
+package src.paint.modelo;
 
 public class TransformarTonosDeGris extends Transformacion {
 
