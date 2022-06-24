@@ -1,17 +1,14 @@
 package inter;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
 public class Frame extends JFrame {
+    private Panel panelT;
 
-    private String tablaa [] = {"a","s","d"};
-    private JTable tabla;
-    private DefaultTableModel modeloTabla = new DefaultTableModel();
+
 
     public Frame (){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -23,32 +20,18 @@ public class Frame extends JFrame {
     }
 
     public void cargarComponentes (){
-
-        modeloTabla.addColumn("Nombre");
-        modeloTabla.addColumn("Apellido");
-        modeloTabla.addColumn("Edad");
-
-        for (int i = 0; i < 60; i++) {
-            modeloTabla.addRow(tablaa);
-        }
-        tabla = new JTable(modeloTabla);
-        JScrollPane scroll = new JScrollPane(tabla);
-        scroll.setBounds(0, 0, 10, 60);
-        add(scroll);
+        setPreferredSize(this.getSize());
 
         JMenuBar bar = new JMenuBar();
         this.setJMenuBar(bar);
         JMenu menu = new JMenu("Opciones");
         bar.add(menu);
-
         JMenuItem itemArchivo = new JMenuItem("Cargar Archivo");
         JMenuItem itemCarpeta = new JMenuItem("Crear Carpeta");
-        //JMenuItem itemSubirArchivo = new JMenuItem("Subir Archivo");
 
         itemArchivo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //menuArchivo_cargarTXT();
                 System.out.println("Entroo");
                 menuArchivo_cargarTXT();
             }
@@ -56,16 +39,28 @@ public class Frame extends JFrame {
         itemCarpeta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //menuArchivo_cargarTXT();
                 System.out.println("Entroo");
-                FrameEmergente panel = new FrameEmergente();
+                String nombre = JOptionPane.showInputDialog("Ingrese el nombre de la carpeta");
+                // Logger System.out.println("El nombre de la capeta es "+nombre);
+                Carpeta nuevaCarpeta = new Carpeta();
+                nuevaCarpeta.setNombre(nombre);
+                nuevaCarpeta.setTamaño(100);
+                nuevaCarpeta.codificarNombre();
+                nuevaCarpeta.setTipo("Carpeta");
+                panelT.insertarCarpeta(nuevaCarpeta);
             }
         });
 
         menu.add(itemArchivo);
         menu.add(itemCarpeta);
-        //menu.add(itemSubirArchivo);
+
+
+        panelT = new Panel(this.getWidth(),this.getHeight());
+        this.getContentPane().add(panelT);
         this.pack();
+
+
+
     }
 
     protected void menuArchivo_cargarTXT() {
@@ -73,8 +68,37 @@ public class Frame extends JFrame {
         int respuesta = fileChooser.showOpenDialog(null);
         if (respuesta == JFileChooser.APPROVE_OPTION) {
             File Archivo = new File(fileChooser.getSelectedFile().getPath());
-            System.out.println(Archivo.getPath()+"");
+            Archivo v = new Archivo();
+            v.tipo(encontrarExtension(Archivo.getName()));
+            v.setNombre(encontrarNombre(Archivo.getName()));
+            v.setTamaño(Archivo.length());
+            v.codificarNombre();
+            panelT.insertarArchivo(v);
+            //System.out.println(encontrarExtension(Archivo.getName())+"");
+            //System.out.println(encontrarNombre(Archivo.getName())+"");
         }
+    }
+
+    public String encontrarExtension (String ex){
+        for (int i = 0 ; i<ex.length();i++){
+            String letra = ex.substring(i,i+1);
+            if (letra.equals(".")){
+                String nombre = ex.substring(i+1,ex.length()+1-1);
+                return nombre;
+            }
+        }
+        return "no se encontro";
+    }
+    public String encontrarNombre (String ex){
+        for (int i = 0 ; i<ex.length();i++){
+            String letra = ex.substring(i,i+1);
+            if (letra.equals(".")){
+                String nombre = ex.substring(0,i);
+                return nombre;
+            }
+        }
+
+        return "no se encontro";
     }
 
 }

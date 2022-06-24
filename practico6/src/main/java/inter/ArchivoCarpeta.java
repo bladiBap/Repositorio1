@@ -1,7 +1,11 @@
+package inter;
+
 public class ArchivoCarpeta {
 
     private String nombre;
-    private int tamaño;
+
+    private String nombreCode;
+    private long tamaño;
     private String ubicacionFisica;
     private ArchivoCarpeta padre;
 
@@ -13,11 +17,11 @@ public class ArchivoCarpeta {
         this.nombre = nombre;
     }
 
-    public int getTamaño() {
+    public long getTamaño() {
         return tamaño;
     }
 
-    public void setTamaño(int tamaño) {
+    public void setTamaño(long tamaño) {
         this.tamaño = tamaño;
     }
 
@@ -37,11 +41,18 @@ public class ArchivoCarpeta {
         this.padre = padre;
     }
 
-    public String codificarNombre (){
+    public void codificarNombre (){
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i<8; i++){
             sb.append((char) (Math.random()*26+'a'));
         }
-        return  sb.toString();
+        nombreCode =  sb.toString();
+    }
+    public String getNombreCode() {
+        return nombreCode;
+    }
+
+    public void setNombreCode(String nombreCode) {
+        this.nombreCode = nombreCode;
     }
 }

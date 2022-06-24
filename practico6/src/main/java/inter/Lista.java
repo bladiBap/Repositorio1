@@ -1,4 +1,4 @@
-package otros;
+package inter;
 
 import java.util.Iterator;
 
