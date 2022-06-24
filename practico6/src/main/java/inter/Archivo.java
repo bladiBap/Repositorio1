@@ -1,5 +1,7 @@
 package inter;
 
+import java.text.DecimalFormat;
+
 public class Archivo extends ArchivoCarpeta{
     
 
@@ -28,18 +30,31 @@ public class Archivo extends ArchivoCarpeta{
     }
 
     @Override
-    public void setTamaño(long tamaño) {
+    public void setTamaño(float tamaño) {
         super.setTamaño(tamaño);
         convertir(tamaño);
     }
 
-    public void convertir (long bytes){
-        if (bytes>=0 && bytes <= 1000){
+    public void convertir (float bytes){
+        DecimalFormat df = new DecimalFormat("#.00");
+        String n = "";
+        float num = (float) 1.21;
+        if (bytes>=0 && bytes <= 1024){
             this.tamaño = bytes;
             tipoNombre =  "bytes";
-        } else if (bytes>1000 && bytes <= 1000000) {
-            this.tamaño = bytes/1000;
+        } else if (bytes>1024 && bytes <= 1048576) {
+            //this.tamaño = bytes/1024;
+            n = df.format(bytes/1024);
+            n = cambiarStrin(n);
+            System.out.println(n);
+            this.tamaño = Float.parseFloat(n);
             tipoNombre =  "Kb";
+        } else if (bytes > 1048576 && bytes <= 1073741824) {
+            n = df.format(bytes/1048576);
+            n = cambiarStrin(n);
+            System.out.println(n);
+            this.tamaño = Float.parseFloat(n);
+            tipoNombre =  "Mb";
         }
     }
 
@@ -49,5 +64,16 @@ public class Archivo extends ArchivoCarpeta{
 
     public void setTipoNombre(String tipoNombre) {
         this.tipoNombre = tipoNombre;
+    }
+
+    public String cambiarStrin (String m){
+        for (int i = 0; i<m.length();i++){
+            String letra = m.substring(i,i+1);
+            if (letra.equals(",")) {
+                String finnaS = m.substring(0,i-1)+"."+m.substring(i+1,m.length()+1-1);
+                return finnaS;
+            }
+        }
+        return null;
     }
 }

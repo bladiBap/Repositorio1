@@ -5,7 +5,7 @@ public class ArchivoCarpeta {
     protected String nombre;
 
     protected String nombreCode;
-    protected long tamaño;
+    protected float tamaño;
     protected String ubicacionFisica;
     protected ArchivoCarpeta padre;
 
@@ -17,11 +17,11 @@ public class ArchivoCarpeta {
         this.nombre = nombre;
     }
 
-    public long getTamaño() {
+    public double getTamaño() {
         return tamaño;
     }
 
-    public void setTamaño(long tamaño) {
+    public void setTamaño(float tamaño) {
         this.tamaño = tamaño;
     }
 

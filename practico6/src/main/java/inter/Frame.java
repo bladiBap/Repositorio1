@@ -1,6 +1,7 @@
 package inter;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +12,7 @@ import java.io.IOException;
 public class Frame extends JFrame {
     private Panel panelT;
 
-
+    private static final org.apache.log4j.Logger logger = Logger.getRootLogger();
 
     public Frame (){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -48,7 +49,7 @@ public class Frame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Entroo");
                 String nombre = JOptionPane.showInputDialog("Ingrese el nombre de la carpeta");
-                // Logger System.out.println("El nombre de la capeta es "+nombre);
+                logger.info("El nombre de la capeta es "+nombre);
 
                 if (nombre.trim().equals("")){
                     JOptionPane.showMessageDialog(null,"No se aceptan solo espacios");

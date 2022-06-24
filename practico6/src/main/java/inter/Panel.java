@@ -1,6 +1,7 @@
 package inter;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -11,6 +12,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Panel extends JPanel {
+
+    private static final org.apache.log4j.Logger logger = Logger.getRootLogger();
 
     private Configuracion confi = Configuracion.getInstance();
     private Arbol<ArchivoCarpeta> arbol = new Arbol<>();
