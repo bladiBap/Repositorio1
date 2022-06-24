@@ -1,6 +1,8 @@
+package inter;
+
 public final class Configuracion {
     private static Configuracion instance;
-    private String directorioBase = "asd";
+    private String directorioBase;
 
     private Configuracion (){}
 

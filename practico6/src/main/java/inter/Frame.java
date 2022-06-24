@@ -1,9 +1,12 @@
 package inter;
 
+import org.apache.commons.io.FileUtils;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 public class Frame extends JFrame {
     private Panel panelT;
@@ -33,7 +36,11 @@ public class Frame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Entroo");
-                menuArchivo_cargarTXT();
+                try {
+                    menuArchivo_cargarTXT();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
         itemCarpeta.addActionListener(new ActionListener() {
@@ -42,12 +49,16 @@ public class Frame extends JFrame {
                 System.out.println("Entroo");
                 String nombre = JOptionPane.showInputDialog("Ingrese el nombre de la carpeta");
                 // Logger System.out.println("El nombre de la capeta es "+nombre);
+
+                if (nombre.trim().equals("")){
+                    JOptionPane.showMessageDialog(null,"No se aceptan solo espacios");
+                }else {
                 Carpeta nuevaCarpeta = new Carpeta();
                 nuevaCarpeta.setNombre(nombre);
-                nuevaCarpeta.setTamaño(100);
+                nuevaCarpeta.setTamaño(1);
                 nuevaCarpeta.codificarNombre();
                 nuevaCarpeta.setTipo("Carpeta");
-                panelT.insertarCarpeta(nuevaCarpeta);
+                panelT.insertarCarpeta(nuevaCarpeta);}
             }
         });
 
@@ -63,19 +74,31 @@ public class Frame extends JFrame {
 
     }
 
-    protected void menuArchivo_cargarTXT() {
+    protected void menuArchivo_cargarTXT() throws IOException {
         JFileChooser fileChooser = new JFileChooser();
         int respuesta = fileChooser.showOpenDialog(null);
         if (respuesta == JFileChooser.APPROVE_OPTION) {
             File Archivo = new File(fileChooser.getSelectedFile().getPath());
             Archivo v = new Archivo();
-            v.tipo(encontrarExtension(Archivo.getName()));
+            v.setTipo(encontrarExtension(Archivo.getName()));
             v.setNombre(encontrarNombre(Archivo.getName()));
             v.setTamaño(Archivo.length());
             v.codificarNombre();
+            //v.setDireccion();
+
+            File Archivo2 = new File(panelT.getConfi().getDirectorioBase()+"\\"+v.getNombreCode());
+            v.setDireccion(Archivo2.getPath());
+            try{
+                FileUtils.copyFile(Archivo,Archivo2);
+            }catch (Exception e){
+
+            }
+
+
+
+
             panelT.insertarArchivo(v);
-            //System.out.println(encontrarExtension(Archivo.getName())+"");
-            //System.out.println(encontrarNombre(Archivo.getName())+"");
+
         }
     }
 

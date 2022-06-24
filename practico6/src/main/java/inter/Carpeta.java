@@ -6,6 +6,11 @@ public class Carpeta extends ArchivoCarpeta {
 
     private Carpeta padre;
 
+    public Carpeta (){}
+
+    public Carpeta (String x){
+        this.nombre =x;
+    }
     private String tipo = "";
     public void tipo(){
         tipo = "Archivito";
@@ -19,10 +24,7 @@ public class Carpeta extends ArchivoCarpeta {
         this.tipo = tipo;
     }
 
-    @Override
-    public String toString() {
-        return this.getUbicacionFisica();
-    }
+
 
     @Override
     public Carpeta getPadre() {

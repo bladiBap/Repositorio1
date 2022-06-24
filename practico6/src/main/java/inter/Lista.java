@@ -150,7 +150,7 @@ public class Lista<E> implements Iterable<E> {
         private Nodo<E> actual;
         public IteradorLista(Nodo<E> r) {
             actual = r;
-        }
+         }
 
         @Override
         public boolean hasNext() {

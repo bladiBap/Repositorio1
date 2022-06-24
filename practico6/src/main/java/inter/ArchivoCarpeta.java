@@ -2,12 +2,12 @@ package inter;
 
 public class ArchivoCarpeta {
 
-    private String nombre;
+    protected String nombre;
 
-    private String nombreCode;
-    private long tamaño;
-    private String ubicacionFisica;
-    private ArchivoCarpeta padre;
+    protected String nombreCode;
+    protected long tamaño;
+    protected String ubicacionFisica;
+    protected ArchivoCarpeta padre;
 
     public String getNombre() {
         return nombre;
